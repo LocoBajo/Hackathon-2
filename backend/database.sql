@@ -43,6 +43,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Phone` (
   `Value_S` VARCHAR(45) NULL,
   `Weigthing` DECIMAL(3,2) NULL,
   `Total_value` INT NULL,
+  'Category' VARCHAR(45) NULL, 
   `User_Id` INT NOT NULL,
   PRIMARY KEY (`Id`),
   INDEX `fk_Phone_User_idx` (`User_Id` ASC) VISIBLE,

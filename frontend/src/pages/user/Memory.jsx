@@ -1,11 +1,15 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useNavigate } from "react-router-dom";
 import styles from "./Memory.module.css";
+import { useUserContext } from "../../contexts/UserContext";
 import Header from "../../components/user/Header";
 import Footer from "../../components/user/Footer";
 import RAM from "../../assets/RAM.svg";
 
 export default function Memory() {
+  const { setMemory } = useUserContext();
+  const navigate = useNavigate();
   const validationSchema = Yup.object({
     memory: Yup.number().integer().required("*"),
   });
@@ -16,7 +20,9 @@ export default function Memory() {
     },
     validationSchema,
 
-    onSubmit: () => {
+    onSubmit: (values) => {
+      setMemory(values.memory);
+      navigate("/price");
       // récupérer brand et model dans un state pour pouvoir les afficher en fin de parcours
     },
   });

@@ -1,0 +1,29 @@
+.header {
+    background-color: #002743;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.body {
+    height: 80vh; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 3em;
+    text-align: center;
+}
+
+.phonecontainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.picturecontainer {
+    background-color: #00ACB0B2;
+    width:30vw; 
+    height: 20vh;
+    justify-content: center;
+    }
+
+img {
+    width : 10vw; 
+}
