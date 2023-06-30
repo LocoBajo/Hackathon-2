@@ -9,9 +9,77 @@
     justify-content: space-around;
 }
 
+.descriptioncontainer  {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.instructions {
+    margin-top: 1.5em;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
 .body {
     height: 80vh; 
 }
 img {
     width : 10vw; 
 }
+
+.rowcontainer {
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: bold;
+}
+
+/* input {
+    display: none
+} */
+
+.checkbox {
+    width: 39vw;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2em;
+    background-color: #2187ab;
+    margin-bottom: 1em;
+}
+
+.singlecheckbox {
+    width: 35vw;
+    height: 7vh;
+    background-color: #2187ab;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2em;
+    font-weight: bold;
+    margin-top: 1.5em;
+}
+
+.buttoncontainer {
+    /* width: 35vw; */
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.statebutton {
+    margin-top: 2em;
+    height: 5vh; 
+    width: 35vw; 
+    border-radius: 1em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold; 
+    background-color: #Be2539;
+    font-size: 1.2em;
+    border: 0.5px;
+}
+

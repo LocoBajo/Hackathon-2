@@ -1,6 +1,8 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useNavigate } from "react-router-dom";
 import styles from "./Brand.module.css";
+import { useUserContext } from "../../contexts/UserContext";
 import AppleLogo from "../../assets/Apple Logo.svg";
 import HuaweiLogo from "../../assets/Huawei Logo.svg";
 import XiaomiLogo from "../../assets/Xiaomi Logo.svg";
@@ -9,6 +11,8 @@ import Header from "../../components/user/Header";
 import Footer from "../../components/user/Footer";
 
 export default function Brand() {
+  const { setModel } = useUserContext();
+  const navigate = useNavigate();
   const validationSchema = Yup.object({
     brand: Yup.string().required("*"),
     model: Yup.string().required("*"),
@@ -21,7 +25,9 @@ export default function Brand() {
     },
     validationSchema,
 
-    onSubmit: () => {
+    onSubmit: (values) => {
+      setModel(values.model);
+      navigate("/storage");
       // récupérer brand et model dans un state pour pouvoir les afficher en fin de parcours
     },
   });

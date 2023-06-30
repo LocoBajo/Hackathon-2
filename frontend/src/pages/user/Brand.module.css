@@ -30,9 +30,9 @@
     border-radius: 2em;
 }
 
-.brandcontainer input {
+/* .brandcontainer input {
     display: none
-}
+} */
 
 .brandcontainer label {
     padding-bottom: 1em;
@@ -50,7 +50,7 @@ img {
 }
 
 select {
-    width: 30vw;
+    width: 40vw;
     margin-top: 4em;
     height: 4vh;
     background-color: #2187ab;

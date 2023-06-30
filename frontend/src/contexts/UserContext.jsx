@@ -17,6 +17,11 @@ export function UserContextProvider({ children }) {
     if (!user.id) navigate("/");
   }, [user.id]);
 
+  const [model, setModel] = useState(null);
+  const [storage, setStorage] = useState(null);
+  const [memory, setMemory] = useState(null);
+  const [status, setStatus] = useState(null);
+
   const login = (_user) => {
     setUser(_user);
     localStorage.setItem("user", JSON.stringify(_user));
@@ -33,8 +38,21 @@ export function UserContextProvider({ children }) {
   };
 
   const memo = useMemo(() => {
-    return { user, setUser, login, logout };
-  }, [user]);
+    return {
+      user,
+      model,
+      storage,
+      memory,
+      status,
+      setUser,
+      setModel,
+      setStorage,
+      setMemory,
+      setStatus,
+      login,
+      logout,
+    };
+  }, [user, model, storage, memory, status]);
 
   return <UserContext.Provider value={memo}>{children}</UserContext.Provider>;
 }
