@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 // import * as yup from "yup";
+// eslint-disable-next-line no-unused-vars
 import { toast } from "react-toastify";
 import APIService from "../../services/APIService";
 import { useUserContext } from "../../contexts/UserContext";
@@ -18,14 +19,14 @@ function Login() {
       password: "",
     },
     onSubmit: async (values) => {
-      try {
-        await APIService.post("/api/login", values);
-        login(values);
-        navigate("/home");
-      } catch (err) {
+      /*       try {
+        await  */ APIService.post("/api/login", values);
+      login(values);
+      navigate("/home");
+      /*  } catch (err) {
         console.error("Login error:", err);
         toast.error("An error occurred during login.");
-      }
+      } */
     },
   });
 

@@ -1,6 +1,7 @@
 import styles from "./Price.module.css";
 import { useUserContext } from "../../contexts/UserContext";
 import iPhone from "../../assets/iPhone.svg";
+import euro from "../../assets/euro.svg";
 import Header from "../../components/user/Header";
 import Footer from "../../components/user/Footer";
 
@@ -47,7 +48,7 @@ export default function Price() {
     <div>
       <Header />
       <div className={styles.body}>
-        <h2> Résultat </h2>
+        <h1> Récapitulatif </h1>
         <div className={styles.phonecontainer}>
           <div className={styles.picturecontainer}>
             <img src={iPhone} alt="" />
@@ -60,8 +61,12 @@ export default function Price() {
             <h3> Pondération : {ponderation * 100}% </h3>
           </div>
         </div>
+        <br />
+        <br />
+        <h1> Prix conseillé </h1>
         <div className={styles.pricecontainer}>
-          <h1> Prix conseillé : {recommandedPrice} euros </h1>
+          <img src={euro} alt="euro" />
+          <h1> {recommandedPrice} euros </h1>
         </div>
       </div>
       <Footer />

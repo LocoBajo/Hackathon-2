@@ -36,12 +36,12 @@ img {
     font-weight: bold;
 }
 
-input {
+/* input {
     display: none
-}
+} */
 
 .checkbox {
-    width: 35vw;
+    width: 39vw;
     height: 7vh;
     display: flex;
     justify-content: center;

@@ -17,11 +17,11 @@ function Presentation() {
       <div className={styles.Description}>
         <h1 className={styles.Welcome}>Bienvenue !</h1>
         <p>
-          Notre plateforme vous permet de facilement et rapidement estimer la
-          valeur des téléphones mobile usagés qui sont donnés à Emaus. Grâce à
-          cet outil d'évaluation, vous pouvez obtenir une estimation juste et
-          transparente pour chaque téléphone que vous recevez, ce qui vous
-          aidera dans vos activités quotidiennes.
+          Notre plateforme vous permet d'estimer facilement la valeur des
+          téléphones mobiles usagés donnés à Emmaus. Grâce à cet outil
+          d'évaluation, vous pouvez obtenir une estimation juste et transparente
+          pour chaque téléphone que vous recevez, ce qui vous aidera dans vos
+          activités quotidiennes.
         </p>
         <div className={styles.button}>
           <button
